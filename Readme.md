@@ -1,5 +1,7 @@
 # Ryn
 
+![20250201_1838_Ryn_ Elegant Coding Revolution_simple_compose_01jk19fvj1f48btkj94gyr1z6z](https://github.com/user-attachments/assets/501b4487-cad7-4990-b6fa-009b4ab83945)
+
 **Ryn** is a modern, expressive, and minimalist programming language designed to empower developers with elegant syntax and robust performance. Whether you're building scalable applications, prototyping new ideas, or exploring new paradigms, Ryn aims to make coding both enjoyable and efficient.
 
 ## Features
