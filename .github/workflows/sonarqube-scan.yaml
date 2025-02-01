@@ -28,10 +28,10 @@ jobs:
           dotnet-version: '9.0'
 
       - name: Restore dependencies
-        run: dotnet restore ./ryn-lang/ryn-lang.sln
+        run: dotnet restore ./Ryn-lang/Ryn-lang.sln
 
       - name: Build solution
-        run: dotnet build ./ryn-lang/ryn-lang.sln --configuration Release --no-restore
+        run: dotnet build ./Ryn-lang/Ryn-lang.sln --configuration Release --no-restore
 
       - name: Install dotnet-coverage
         run: dotnet tool install --global dotnet-coverage
