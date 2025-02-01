@@ -1,6 +1,6 @@
 # Ryn
 
-![20250201_1953_Exploring Ryn's Futuristic Design_remix_01jk1drpm6ejcbeqsbqeg37c3d](https://github.com/user-attachments/assets/f185fc94-52cd-4687-9e50-061f2797448d)
+![20250201_1953_Exploring Ryn's Futuristic Design_remix_01jk1drpm6ejcbeqsbqeg37c3d](https://github.com/ReinoutWW/ryn-lang/blob/master/RYN.gif)
 
 
 **Ryn** is a modern, expressive, and minimalist programming language designed to empower developers with elegant syntax and robust performance. Whether you're building scalable applications, prototyping new ideas, or exploring new paradigms, Ryn aims to make coding both enjoyable and efficient.
