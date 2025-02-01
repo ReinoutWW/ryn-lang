@@ -41,7 +41,7 @@ jobs:
       - name: Run Tests and Collect Coverage
         run: |
           export PATH="$PATH:/home/runner/.dotnet/tools"
-          dotnet-coverage collect \
+          dotnet-coverage collect ./Ryn-lang/Ryn-lang.sln \
             "dotnet test --configuration Release --no-build" \
             -f xml -o coverage.xml
 
