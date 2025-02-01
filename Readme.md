@@ -10,10 +10,21 @@
 - **Cross-Platform**: Write once, run anywhere.
 - **Rich Standard Library**: A versatile set of built-in tools and utilities to kickstart your projects.
 
+## Solution architecture
+```
+Ryn-lang.sln                 // The main solution file
+└── src
+    ├── Ryn.CLI              // Console app (the compiler "front-end" CLI)
+    ├── Ryn.Lexer            // Lexical analysis library
+    ├── Ryn.Parser           // Parsing library
+    ├── Ryn.AST              // Abstract Syntax Tree definitions
+    ├── Ryn.Semantic         // Semantic analysis/type-checking
+    ├── Ryn.CodeGen          // Code generation / bytecode / IL / transpiler
+    ├── Ryn.Runtime          // (Optional) Runtime support or standard library
+    └── Ryn.Compiler         // High-level orchestration combining Lexer, Parser, AST, Semantic, CodeGen
+└── tests
+    └── Ryn.Compiler.Tests   // Unit tests and integration tests
+```
+
 ## Getting Started
 
-### Installation
-
-To install Ryn, download the latest release from our [GitHub repository](https://github.com/ryn-lang/ryn) or visit the [official website](https://ryn-lang.org) for detailed instructions.
-
-For Unix-based systems, you can install via the command line:
