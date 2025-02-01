@@ -1,0 +1,55 @@
+name: SonarQube
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  sonarqube:
+    name: SonarQube
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up .NET 8
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0'
+
+      - name: Set up .NET 9
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build solution
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Install dotnet-coverage
+        run: dotnet tool install --global dotnet-coverage
+        env:
+          DOTNET_ROOT: /home/runner/.dotnet
+
+      - name: Run Tests and Collect Coverage
+        run: |
+          export PATH="$PATH:/home/runner/.dotnet/tools"
+          dotnet-coverage collect \
+            "dotnet test --configuration Release --no-build" \
+            -f xml -o coverage.xml
+
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v4
+        env: 
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.cs.vscoveragexml.reportsPaths=coverage.xml
+            -Dsonar.coverage.exclusions=**/bin/**,**/obj/**
