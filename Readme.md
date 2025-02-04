@@ -5,6 +5,8 @@
 
 **Ryn** is a modern, expressive, and minimalist programming language designed to empower developers with elegant syntax and robust performance. Whether you're building scalable applications, prototyping new ideas, or exploring new paradigms, Ryn aims to make coding both enjoyable and efficient.
 
+Why? Quoniam Possumus
+
 ## Features
 
 - **Clean & Intuitive Syntax**: Designed to be human-readable while remaining succinct.
