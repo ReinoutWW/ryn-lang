@@ -1,0 +1,9 @@
+pub class Hello {
+    pub fn greet() {
+        Print("Hello from Ryn!");
+    }
+
+    priv fn secret() {
+        Print("Top secret method!");
+    }
+}
