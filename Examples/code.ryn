@@ -1,0 +1,47 @@
+# code.ryn
+# A sample Ryn program illustrating class definitions, functions, and flow control.
+
+import core.io
+
+class Person:
+    let name: String
+    var age: Int
+
+    fn init(n: String, a: Int):
+        # Constructor-like function
+        this.name = n
+        this.age = a
+
+fn greet(person: Person) -> Void:
+    # Demonstrates string concatenation and calling a print function
+    printLine("Hello, " + person.name + "!")
+
+fn addYears(person: Person, years: Int) -> Int:
+    # Example of a method that modifies a mutable field
+    person.age = person.age + years
+    return person.age
+
+fn main() -> Int:
+    # Create a new Person instance
+    let alice = Person("Alice", 30)
+
+    # Call a function
+    greet(alice)
+
+    # Show how an if-statement might look without parentheses or braces
+    if alice.age < 40:
+        printLine("You are still young.")
+    else:
+        printLine("You are wise beyond measure!")
+
+    # Demonstrate calling another function to mutate the person's age
+    let updatedAge = addYears(alice, 5)
+    printLine("Updated age for " + alice.name + " is now " + updatedAge)
+
+    # Return an integer status code
+    return 0
+
+fn trySomethingNew() -> Int:
+    let variable = 10
+
+    return variable * 10;

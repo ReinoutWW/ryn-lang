@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Antlr4.Runtime.Standard" Version="4.13.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ryn.AST\Ryn.AST.csproj" />
+    <ProjectReference Include="..\Ryn.CodeGen\Ryn.CodeGen.csproj" />
+  </ItemGroup>
+
 </Project>
