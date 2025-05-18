@@ -45,6 +45,13 @@ namespace Ryn.AST
             return methodNode;
         }
 
+        public override AstNode VisitVarDecl(RynParser.VarDeclContext context)
+        {
+            string name = context.ID().GetText();
+            string expr = context.expr().GetText();
+            return new VarDeclNode(name, expr);
+        }
+
         public override AstNode VisitPrintStmt(RynParser.PrintStmtContext ctx)
         {
             string content = ctx.expr().GetText();

@@ -43,4 +43,16 @@ namespace Ryn.AST
         public string Content { get; }
         public PrintNode(string content) => Content = content;
     }
+
+    public class VarDeclNode : AstNode
+    {
+        public string Name { get; }
+        public string Expression { get; }
+
+        public VarDeclNode(string name, string expression)
+        {
+            Name = name;
+            Expression = expression;
+        }
+    }
 }

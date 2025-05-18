@@ -33,3 +33,30 @@ Ryn-lang.sln                 // The main solution file
 
 ## Getting Started
 
+To compile a Ryn source file and execute the generated C# code, use the CLI:
+
+```bash
+dotnet run --project Ryn-lang/Ryn.CLI -f path/to/file.ryn
+```
+
+The example below prints a greeting:
+
+```ryn
+pub class Hello {
+    pub fn greet() {
+        Print("Hello from Ryn!");
+    }
+}
+```
+
+Variable declarations are also supported:
+
+```ryn
+pub class Demo {
+    pub fn main() {
+        let x = 5;
+        Print(x);
+    }
+}
+```
+
